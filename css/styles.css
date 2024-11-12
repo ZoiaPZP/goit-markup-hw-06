@@ -1037,7 +1037,7 @@ display: none;
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
 
     .container {
         max-width: 768px;
@@ -1047,7 +1047,9 @@ display: none;
     margin-right: 120px;
     text-align: left;
 }
-
+.vlog {
+    
+}
     .footer-text {
         max-width: 288px;
         text-align: left;
