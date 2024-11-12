@@ -900,9 +900,12 @@ display: none;
 .footer {
     background-color: #2e2f42;
     padding: 96px 0;
-    
 }
-.cont {
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 320px;
     padding: 0 16px;
     margin: 0 auto;
@@ -912,10 +915,9 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-margin-bottom: 72px;
+    text-align: center;
+    margin-bottom: 72px;
 }
-
 
 .footer-lo {
     font-weight: 700;
@@ -924,17 +926,11 @@ margin-bottom: 72px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    text-align: center;
     display: inline-block;
     margin-bottom: 16px;
 }
 
 .footer-logo-white {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
     color: #f4f4fd;
 }
 
@@ -943,7 +939,6 @@ margin-bottom: 72px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    text-align: left;
     max-width: 288px;
 }
 
@@ -957,9 +952,7 @@ margin-bottom: 72px;
 .socials-text {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--white-color, #FFFFFF);
+    color: #ffffff;
     margin-bottom: 16px;
 }
 
@@ -971,12 +964,12 @@ margin-bottom: 72px;
 .social-link {
     width: 40px;
     height: 40px;
-    background-color: var(--blue-color, #4d5ae5);
+    background-color: #4d5ae5;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms;
 }
 
 .footer-social-link:hover,
@@ -987,7 +980,7 @@ margin-bottom: 72px;
 .social-link svg {
     width: 24px;
     height: 24px;
-    fill: var(--white-color, #f4f4fd);
+    fill: #f4f4fd;
     transition: fill 0.3s;
 }
 
@@ -1000,8 +993,6 @@ margin-bottom: 72px;
 .subscribe-text {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 16px;
 }
@@ -1019,11 +1010,9 @@ margin-bottom: 72px;
     background-color: transparent;
     font-size: 12px;
     line-height: 2;
-    letter-spacing: 0.04em;
     padding-left: 16px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     color: #ffffff;
+    border-radius: 4px;
 }
 
 .subscribe-input::placeholder {
@@ -1038,10 +1027,7 @@ margin-bottom: 72px;
     align-items: center;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
     color: #ffffff;
-    cursor: pointer;
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
@@ -1053,39 +1039,38 @@ margin-bottom: 72px;
 
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-    .cont {
+    .container {
         max-width: 584px;
-    }
-
-    .footer-container {
         flex-direction: row;
+        justify-content: space-between;
         align-items: flex-start;
         display: flex;
-            flex-direction: column;
-            margin-bottom: 72px;
-            max-width: 584px;
     }
+
 
     .footer-text {
         max-width: 288px;
-        text-align: left;
     }
 
     .socials-container {
-        align-items: flex-start;
         margin-bottom: 0;
     }
 
     .subscribe-form {
-        flex-direction: row;
+        display: flex;
+            gap: 24px;
+            flex-direction: row;
+            flex-wrap: wrap;
     }
 }
 
 
 @media screen and (min-width: 1158px) {
-    .cont {
+    .container {
         max-width: 1200px;
         padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .footer {
@@ -1093,14 +1078,11 @@ margin-bottom: 72px;
     }
 
     .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 108px;
-        
+        flex-direction: column;
     }
 
     .footer-text {
-        max-width: 450px;
+        /* max-width: 450px; */
     }
 
     .socials-container {
@@ -1116,7 +1098,6 @@ margin-bottom: 72px;
         flex-direction: row;
     }
 }
-
 
 
 
