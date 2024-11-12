@@ -653,10 +653,7 @@ list-style: none;
     }
 }
 @media screen and (min-width: 768px) {
-    .team-item {
-        width: calc((100% - 72px) / 2);
-    }
-}
+   
 
 @media screen and (min-width: 1158px) {
     .team-item {
@@ -1044,11 +1041,13 @@ display: none;
     }
 
 .footer-container {
-    margin-right: 120px;
-    text-align: left;
+   
+   align-items: flex-start;
 }
 .vlog {
-    
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 108px;
 }
     .footer-text {
         max-width: 288px;
@@ -1056,10 +1055,12 @@ display: none;
     }
 .subscribe-container {
      text-align: left;
+    align-items: flex-start;
  }
 .socials-container {
         margin-bottom: 0;
         margin-right: 80px;
+        align-items: flex-start;
            
     }
 
@@ -1075,9 +1076,12 @@ display: none;
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
-        padding: 0;
-        flex-direction: row;
+        padding: 0 15px;
         
+        
+    }
+    .vlog {
+        flex-wrap: nowrap;
     }
         .subscribe-input::placeholder {
             opacity: 1;
@@ -1093,6 +1097,7 @@ display: none;
 
     .footer-container {
         flex-direction: column;
+        margin-right: 120px;
     }
 
     .footer-text {
@@ -1110,6 +1115,7 @@ display: none;
 
     .subscribe-form {
         flex-direction: row;
+        flex-wrap: nowrap;
     }
 }
  
