@@ -1362,3 +1362,21 @@ width: 288px;
 .backdrop:not(.is-open) .modal {
     transform: translate(-50%, -50%);
 }
+
+/* Where the design and images come from. */
+.footer-credit {
+    max-width: 320px;
+    margin: 72px auto 0;
+    padding: 0 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgba(244, 244, 253, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+    .footer-credit {
+        max-width: none;
+    }
+}
